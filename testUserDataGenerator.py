@@ -35,7 +35,7 @@ for dict in data:
 
 for user in data:
     f = open(user["username"] + ".json", "w")
-    f.write(json.dumps(data))
+    f.write(json.dumps(user))
     f.close()
 
 f = open("AllUsersJson.json", "w")
