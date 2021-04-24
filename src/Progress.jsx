@@ -15,47 +15,47 @@ const Progress = props => {
   const [valueEnd, setValueEnd] = React.useState(valuePercentage);
   return (
     <div style={{ padding: '40px 40px 40px 40px', margin: 'auto' }}>
-      <Wrapper label="Meals Left" description={80}>
-        <ProgressProvider valueEnd={valueEnd}>
-          {value => (
-            <>
-              <div
-                style={{
-                  position: 'absolute',
-                  top: '50%',
-                  left: '35%',
-                  color: '#228B22',
-                  marginTop: '10%',
-                  fontSize: '0.5em'
-                }}
-              >
-                {`meals left`}
-              </div>
-              <CircularProgressbar
-                value={value}
-                text={`${15}/${20}`}
-                styles={{
-                  // Customize the path, i.e. the "completed progress"
-                  path: {
-                    stroke: `rgba(255, 255, 255, ${value / 100})`,
-                    transition: 'stroke-dashoffset 0.5s ease 0s'
-                  },
-                  // Customize the circle behind the path, i.e. the "total progress"
-                  trail: {
-                    // Trail color
-                    stroke: '#228B22'
-                  },
-                  // Customize the text
-                  text: {
-                    fill: '#228B22'
-                    // fontSize: '14px'
-                  }
-                }}
-              />
-            </>
-          )}
-        </ProgressProvider>
-      </Wrapper>
+      {/* <Wrapper label="Meals Left" description={80}> */}
+      <ProgressProvider valueEnd={valueEnd}>
+        {value => (
+          <>
+            <div
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '35%',
+                color: '#228B22',
+                marginTop: '10%',
+                fontSize: '0.5em'
+              }}
+            >
+              {`meals left`}
+            </div>
+            <CircularProgressbar
+              value={value}
+              text={`${15}/${20}`}
+              styles={{
+                // Customize the path, i.e. the "completed progress"
+                path: {
+                  stroke: `rgba(255, 255, 255, ${value / 100})`,
+                  transition: 'stroke-dashoffset 0.5s ease 0s'
+                },
+                // Customize the circle behind the path, i.e. the "total progress"
+                trail: {
+                  // Trail color
+                  stroke: '#228B22'
+                },
+                // Customize the text
+                text: {
+                  fill: '#228B22'
+                  // fontSize: '14px'
+                }
+              }}
+            />
+          </>
+        )}
+      </ProgressProvider>
+      {/* </Wrapper> */}
     </div>
   );
 };
