@@ -103,7 +103,7 @@ const LoginPage = () => {
               testUsername === username && testPassword === password
           )
         ) {
-          cookies.set('appUsername', appUsername, { path: '/' });
+          cookies.set('appUsername', username, { path: '/' });
           history.push('/dashboard');
         } else {
           setRequestError('User does not exist.');
