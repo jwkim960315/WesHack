@@ -5,8 +5,13 @@ import 'react-circular-progressbar/dist/styles.css';
 
 import ProgressProvider from './ProgressProvider';
 
-const Progress = () => {
-  const [valueEnd, setValueEnd] = React.useState(25);
+const Progress = props => {
+  const amountGoal = props.amountGoal;
+  const amountLeft = props.amountLeft;
+  const valuePercentage = 100 * (1 - amountLeft / amountGoal);
+  const displayMeals = false;
+  const displayPoints = false;
+  const [valueEnd, setValueEnd] = React.useState(valuePercentage);
   return (
     <div style={{ padding: '40px 40px 40px 40px', margin: 'auto' }}>
       <Wrapper label="Meals Left" description={80}>
