@@ -1,8 +1,8 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import PrivateRoute from "./PrivateRoute";
-import Dashboard from "./dashboard/Dashboard";
-import LoginPage from "./LoginPage";
-import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import PrivateRoute from './PrivateRoute';
+import Dashboard from './dashboard/Dashboard';
+import LoginPage from './LoginPage';
+import './App.css';
 
 function App() {
   return (

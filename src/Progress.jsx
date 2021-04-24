@@ -74,12 +74,11 @@ const Progress = props => {
   );
 };
 
-// this wrapper is to be styled to fit into the card
 function Wrapper(props) {
   return (
     <div style={{ marginBottom: 50 }}>
       <div style={{ marginTop: 0, display: 'flex' }}>
-        <div style={{ width: 350, position: 'relative' }}>{props.children}</div>
+        <div style={{ width: 400, position: 'relative' }}>{props.children}</div>
         <div style={{ marginLeft: 30 }}>
           <h1>{props.label}:</h1>
           <p>{props.description}</p>
