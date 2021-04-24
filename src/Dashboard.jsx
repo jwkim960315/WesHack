@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Progress from "./Progress";
 import Cookies from "universal-cookie";
 import Dial from "./Dial";
