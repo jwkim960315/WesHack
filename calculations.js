@@ -7,18 +7,18 @@ var date = 3; //can be 1 through 7 (3 is Wed.)
 var remainingMealsSince = remainingMeals;
 var remainingPointsSince = remainingPoints;
 if (timePeriod === "day") {
-    remainingMealsSince += transactions[transactions.length-1]["Meals"]
-    remainingPointsSince += transactions[transactions.length-1]["Points"]
+  remainingMealsSince += transactions[transactions.length - 1]["Meals"];
+  remainingPointsSince += transactions[transactions.length - 1]["Points"];
 } else if (timePeriod === "week") {
-    for (var i = 0; i < date; i++) {
-        remainingMealsSince += transactions[transactions.length-1-i]["Meals"]
-        remainingPointsSince += transactions[transactions.length-1-i]["Points"]
-    }
+  for (var i = 0; i < date; i++) {
+    remainingMealsSince += transactions[transactions.length - 1 - i]["Meals"];
+    remainingPointsSince += transactions[transactions.length - 1 - i]["Points"];
+  }
 } else {
-    for (var i = 0; i < date; i++) {
-        remainingMealsSince += transactions[transactions.length-1-i]["Meals"]
-        remainingPointsSince += transactions[transactions.length-1-i]["Points"]
-    }
+  for (var i = 0; i < date + 7; i++) {
+    remainingMealsSince += transactions[transactions.length - 1 - i]["Meals"];
+    remainingPointsSince += transactions[transactions.length - 1 - i]["Points"];
+  }
 }
 
 //Exponential Recency Weighted Average
@@ -26,5 +26,8 @@ var label = "Meals"; //can be "Meals" or "Points"
 var alpha = 0.3;
 var weightedavg = 0;
 for (var i = 0; i < transactions.length; i++) {
-    weightedavg += transactions[i][label]*alpha*Math.pow((1-alpha),transactions.length-i-1)
+  weightedavg +=
+    transactions[i][label] *
+    alpha *
+    Math.pow(1 - alpha, transactions.length - i - 1);
 }
