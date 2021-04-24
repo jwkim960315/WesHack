@@ -6,7 +6,7 @@ for i in range(1, 31):
     dict = {}
     dict["username"] = "user" + str(i)
     dict["password"] = "pw" + str(i)
-    dict["totalMeals"] = random.choice([420, 0])
+    dict["totalMeals"] = random.choice([0, 420])
     if dict["totalMeals"] == 0:
         dict["totalPoints"] = 1980
         dict["remainingMeals"] = 0
