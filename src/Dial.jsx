@@ -118,7 +118,7 @@ const Dial = () => {
           currentValueText={spending()}
           valueTextFontSize={'30px'}
           maxValue={2}
-          ringWidth={120}
+          ringWidth={60}
           textColor={getColor()}
           // customSegmentLabels={labels}
         />
