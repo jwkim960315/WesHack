@@ -11,6 +11,7 @@ const Progress = props => {
   const valuePercentage = 100 * (1 - amountLeft / amountGoal);
   const displayMeals = false;
   const displayPoints = false;
+  // const [displayMeals, setDis];
   const [valueEnd, setValueEnd] = React.useState(valuePercentage);
   return (
     <div style={{ padding: '40px 40px 40px 40px', margin: 'auto' }}>
