@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
-import ReactSpeedometer from "react-d3-speedometer";
+import React, { useState, useEffect, useRef } from 'react';
+import ReactSpeedometer from 'react-d3-speedometer';
 
 const Dial = ({ data }) => {
   const defaultConfig = 1;
-  const units = { 0: "day", 1: "week", 2: "2 weeks" };
+  const units = { 0: 'day', 1: 'week', 2: '2 weeks' };
 
-  const lastDay = new Date("May 22, 2021 00:00:00");
+  const lastDay = new Date('May 22, 2021 00:00:00');
   var remainingDays = (lastDay - Date.now()) / 1000 / 24 / 60 / 60;
   remainingDays = Math.ceil(remainingDays);
 
@@ -31,7 +31,7 @@ const Dial = ({ data }) => {
     var remPtsRate = (data.remainingPoints / remainingDays).toFixed(2);
     var remMealsRate = (data.remainingMeals / remainingDays).toFixed(1);
     var currRate = hasPoints ? remPtsRate : remMealsRate;
-    var unit = hasPoints ? "Points" : "Meals";
+    var unit = hasPoints ? 'Points' : 'Meals';
     var pastRate = calculateWeightedAvg(data.transactions, unit);
     console.log(pastRate);
 
@@ -43,7 +43,7 @@ const Dial = ({ data }) => {
     setGoal(currRate);
     setPast(pastRate);
     setMoneyUnit(unit);
-    setRerender((prevRerender) => !prevRerender);
+    setRerender(prevRerender => !prevRerender);
   }, [data, dialWrapperRef]);
 
   var spendingRatio = past / goal;
@@ -51,42 +51,42 @@ const Dial = ({ data }) => {
 
   const spending = () => {
     if (spendingRatio > 1.75) {
-      return "Really Overspending";
+      return 'Really Overspending';
     } else if (spendingRatio > 1.25) {
-      return "Overspending";
+      return 'Overspending';
     } else if (spendingRatio > 1.05) {
-      return "Slightly Overspending";
+      return 'Slightly Overspending';
     } else if (spendingRatio > 0.95) {
-      return "Spending Right";
+      return 'Spending Right';
     } else if (spendingRatio > 0.75) {
-      return "Slightly Underspending";
+      return 'Slightly Underspending';
     } else if (spendingRatio > 0.25) {
-      return "Underspending";
+      return 'Underspending';
     } else {
-      return "Really Underspending";
+      return 'Really Underspending';
     }
   };
 
   const getColor = () => {
     if (spendingRatio > 1.75) {
-      return "#fd7d1c";
+      return '#fd7d1c';
     } else if (spendingRatio > 1.25) {
-      return "#fbcb1f";
+      return '#fbcb1f';
     } else if (spendingRatio > 1.05) {
-      return "#9df725";
+      return '#9df725';
     } else if (spendingRatio > 0.95) {
-      return "#55f428";
+      return '#55f428';
     } else if (spendingRatio > 0.75) {
-      return "#2af239";
+      return '#2af239';
     } else if (spendingRatio > 0.25) {
-      return "#2eef97";
+      return '#2eef97';
     } else {
-      return "#33dfec";
+      return '#33dfec';
     }
   };
 
-  const convertSpending = (goal) => {
-    if (timeUnit === "week") {
+  const convertSpending = goal => {
+    if (timeUnit === 'week') {
       return (goal * 7).toFixed(2);
     } else {
       return goal.toFixed(2);
@@ -97,7 +97,7 @@ const Dial = ({ data }) => {
     const { innerWidth: width, innerHeight: height } = window;
     return {
       width,
-      height,
+      height
     };
   }
 
@@ -106,7 +106,7 @@ const Dial = ({ data }) => {
     var alpha = 0.3;
     var weightedavg = 0;
     for (var i = 0; i < transactions.length; i++) {
-      console.log(transactions[i]["Meals"], i);
+      console.log(transactions[i]['Meals'], i);
       weightedavg +=
         transactions[i][label] *
         alpha *
@@ -116,12 +116,12 @@ const Dial = ({ data }) => {
   }
 
   return (
-    <div style={{ textAlign: "center" }}>
+    <div style={{ textAlign: 'center' }}>
       {/* <div style={{ display: "inline-block" }}>Underspending</div> */}
       <div ref={dialWrapperRef}>
         <ReactSpeedometer
-          startColor={"#34c9eb"}
-          endColor={"#FF471A"}
+          startColor={'#34c9eb'}
+          endColor={'#FF471A'}
           // width={Math.max(dialWrapperRef.current.offsetWidth * 0.6, 300)}
           // height={Math.max(dialWrapperRef.current.offsetWidth * 0.35, 175)}
           width={Math.max(
@@ -140,29 +140,29 @@ const Dial = ({ data }) => {
           segments={51}
           value={spendingDisplay}
           currentValueText={spending()}
-          valueTextFontSize={"30px"}
+          valueTextFontSize={'30px'}
           maxValue={2}
           ringWidth={60}
           textColor={getColor()}
         />
       </div>
-      <div style={{ width: "300px", margin: "auto" }}>
-        Based on the past month's data, you have a{" "}
+      <div style={{ width: '300px', margin: 'auto' }}>
+        Based on the past month's data, you have a{' '}
         <span style={{ color: getColor() }} className="predicted">
           predicted
-        </span>{" "}
+        </span>{' '}
         spending rate of
         <span
-          style={{ color: getColor(), display: "block" }}
+          style={{ color: getColor(), display: 'block' }}
           className="predicted"
         >
-          {" " + convertSpending(past) + " " + moneyUnit + " per " + timeUnit}
+          {' ' + convertSpending(past) + ' ' + moneyUnit + ' per ' + timeUnit}
         </span>
       </div>
       <div style={{ marginTop: 20 }}>
-        For the next week, you <span className="suggestion">can</span> spend{" "}
-        <span className="suggestion" style={{ display: "block" }}>
-          {convertSpending(goal) + " " + moneyUnit}
+        For the next week, you <span className="suggestion">can</span> spend{' '}
+        <span className="suggestion" style={{ display: 'block' }}>
+          {convertSpending(goal) + ' ' + moneyUnit}
         </span>
       </div>
     </div>

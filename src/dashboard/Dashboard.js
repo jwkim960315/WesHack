@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Cookies from 'universal-cookie';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -145,6 +146,30 @@ export default function Dashboard() {
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
   const fixedHeightChartPaper = clsx(classes.paper, classes.fixedChartHeigt);
 
+  const cookies = new Cookies();
+  const username = cookies.get('appUsername');
+  var jsonName = './testUsers/' + username + '.json';
+  const [data, setData] = useState(null);
+
+  const getData = async () => {
+    return (
+      await fetch(jsonName, {
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        }
+      })
+    ).json();
+  };
+
+  useEffect(() => {
+    (async () => {
+      var dataFromJson = await getData();
+      console.log(dataFromJson);
+      setData(dataFromJson);
+    })();
+  }, []);
+
   return (
     <ThemeProvider theme={darkTheme}>
       <div className={classes.root}>
@@ -177,13 +202,13 @@ export default function Dashboard() {
               {/* Dial */}
               <Grid item xs={12} md={7} lg={5}>
                 <Paper className={fixedHeightPaper}>
-                  <Dial />
+                  {data && <Dial data={data} />}
                 </Paper>
               </Grid>
               {/* Chart */}
               <Grid item xs={12}>
                 <Paper className={fixedHeightChartPaper}>
-                  <Chart />
+                  {data && <Chart transactions={data.transactions} />}
                 </Paper>
               </Grid>
             </Grid>
