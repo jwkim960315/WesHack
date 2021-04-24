@@ -23,9 +23,19 @@ for i in range(1, 31):
             dict["transactions"].append({"Meals": random.choice([0,1,1,2,2,2,2,3,3,3,4]), "Points": random.choice([0,0,0,0,0,0,random.choice([0,8,12,15,20,25,30])])})
     data.append(dict)
 
+f = open("UserDataListings","w")
+for dict in data:
+    f.write("Username: " + dict["username"] + "; Password: " + dict["password"] + "\n")
+    f.write("TotalMeals: " + str(dict["totalMeals"]) + "\n")
+    f.write("TotalPoints: " + str(dict["totalPoints"]) + "\n")
+    f.write("RemainingMeals: " + str(dict["remainingMeals"]) + "\n")
+    f.write("RemainingPoints: " + str(dict["remainingPoints"]) + "\n")
+    f.write("Transactions: " + str(dict["transactions"]) + "\n")
+    f.write("\n")
+
 f = open("testUsersJson.json", "w")
-for i in data:
-    print(i)
-    print('\n')
+# for i in data:
+#     print(i)
+#     print('\n')
 f.write(json.dumps(data))
 f.close()
