@@ -33,9 +33,11 @@ for dict in data:
     f.write("Transactions: " + str(dict["transactions"]) + "\n")
     f.write("\n")
 
-f = open("testUsersJson.json", "w")
-# for i in data:
-#     print(i)
-#     print('\n')
+for user in data:
+    f = open(user["username"] + ".json", "w")
+    f.write(json.dumps(data))
+    f.close()
+
+f = open("AllUsersJson.json", "w")
 f.write(json.dumps(data))
 f.close()

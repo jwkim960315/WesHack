@@ -1,209 +1,210 @@
 Username: user1; Password: pw1
-TotalMeals: 420
-TotalPoints: 250
-RemainingMeals: 236
-RemainingPoints: 37
-Transactions: [{'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 12}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 8}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 15}, {'Meals': 3, 'Points': 30}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 8}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 8}, {'Meals': 3, 'Points': 12}, {'Meals': 0, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 1, 'Points': 0}]
-
-Username: user2; Password: pw2
 TotalMeals: 0
 TotalPoints: 1980
 RemainingMeals: 0
-RemainingPoints: 460
-Transactions: [{'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 26}]
+RemainingPoints: 576
+Transactions: [{'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 10}]
+
+Username: user2; Password: pw2
+TotalMeals: 420
+TotalPoints: 250
+RemainingMeals: 118
+RemainingPoints: 20
+Transactions: [{'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 30}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 15}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 12}, {'Meals': 4, 'Points': 12}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 30}, {'Meals': 3, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 15}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 25}, {'Meals': 2, 'Points': 0}]
 
 Username: user3; Password: pw3
 TotalMeals: 420
 TotalPoints: 250
-RemainingMeals: 134
-RemainingPoints: 55
-Transactions: [{'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 30}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 25}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 25}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 25}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}]
+RemainingMeals: 230
+RemainingPoints: 93
+Transactions: [{'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 15}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 12}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}]
 
 Username: user4; Password: pw4
-TotalMeals: 0
-TotalPoints: 1980
-RemainingMeals: 0
-RemainingPoints: 535
-Transactions: [{'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 11}]
+TotalMeals: 420
+TotalPoints: 250
+RemainingMeals: 112
+RemainingPoints: 29
+Transactions: [{'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 3, 'Points': 30}, {'Meals': 1, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 25}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 20}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 30}, {'Meals': 3, 'Points': 20}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 25}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 1, 'Points': 20}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}]
 
 Username: user5; Password: pw5
-TotalMeals: 0
-TotalPoints: 1980
-RemainingMeals: 0
-RemainingPoints: 489
-Transactions: [{'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 27}]
+TotalMeals: 420
+TotalPoints: 250
+RemainingMeals: 105
+RemainingPoints: 90
+Transactions: [{'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 15}, {'Meals': 2, 'Points': 8}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 0, 'Points': 15}, {'Meals': 4, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 20}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}]
 
 Username: user6; Password: pw6
 TotalMeals: 420
 TotalPoints: 250
-RemainingMeals: 61
-RemainingPoints: 70
-Transactions: [{'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 30}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}]
+RemainingMeals: 44
+RemainingPoints: 80
+Transactions: [{'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 15}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 12}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 20}, {'Meals': 2, 'Points': 30}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 4, 'Points': 0}]
 
 Username: user7; Password: pw7
 TotalMeals: 420
 TotalPoints: 250
-RemainingMeals: 131
-RemainingPoints: 77
-Transactions: [{'Meals': 0, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 20}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 12}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 30}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 20}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 20}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}]
+RemainingMeals: 36
+RemainingPoints: 72
+Transactions: [{'Meals': 1, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 8}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 15}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 25}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 25}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 20}, {'Meals': 3, 'Points': 0}]
 
 Username: user8; Password: pw8
 TotalMeals: 420
 TotalPoints: 250
-RemainingMeals: 186
-RemainingPoints: 35
-Transactions: [{'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 25}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}]
+RemainingMeals: 43
+RemainingPoints: 15
+Transactions: [{'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 8}, {'Meals': 1, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 1, 'Points': 20}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 15}, {'Meals': 1, 'Points': 0}, {'Meals': 1, 'Points': 8}]
 
 Username: user9; Password: pw9
 TotalMeals: 420
 TotalPoints: 250
-RemainingMeals: 235
-RemainingPoints: 42
-Transactions: [{'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 8}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 15}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 12}, {'Meals': 1, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 25}, {'Meals': 3, 'Points': 20}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 15}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 30}]
+RemainingMeals: 71
+RemainingPoints: 66
+Transactions: [{'Meals': 2, 'Points': 25}, {'Meals': 3, 'Points': 25}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 3, 'Points': 12}, {'Meals': 0, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}]
 
 Username: user10; Password: pw10
-TotalMeals: 420
-TotalPoints: 250
-RemainingMeals: 46
-RemainingPoints: 20
-Transactions: [{'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 1, 'Points': 8}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 25}, {'Meals': 3, 'Points': 30}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 20}, {'Meals': 3, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 15}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 8}, {'Meals': 2, 'Points': 0}]
+TotalMeals: 0
+TotalPoints: 1980
+RemainingMeals: 0
+RemainingPoints: 234
+Transactions: [{'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 28}]
 
 Username: user11; Password: pw11
 TotalMeals: 0
 TotalPoints: 1980
 RemainingMeals: 0
-RemainingPoints: 672
-Transactions: [{'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 29}]
+RemainingPoints: 563
+Transactions: [{'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 12}]
 
 Username: user12; Password: pw12
 TotalMeals: 420
 TotalPoints: 250
-RemainingMeals: 134
-RemainingPoints: 104
-Transactions: [{'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 25}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 12}, {'Meals': 0, 'Points': 0}]
+RemainingMeals: 158
+RemainingPoints: 56
+Transactions: [{'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 25}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 20}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 20}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 8}, {'Meals': 4, 'Points': 25}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 1, 'Points': 0}]
 
 Username: user13; Password: pw13
 TotalMeals: 420
 TotalPoints: 250
-RemainingMeals: 101
-RemainingPoints: 67
-Transactions: [{'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 30}, {'Meals': 2, 'Points': 20}, {'Meals': 4, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 30}, {'Meals': 2, 'Points': 15}, {'Meals': 1, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 3, 'Points': 20}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 4, 'Points': 25}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 15}, {'Meals': 0, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}]
+RemainingMeals: 137
+RemainingPoints: 98
+Transactions: [{'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 25}, {'Meals': 1, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 3, 'Points': 30}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 0, 'Points': 12}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 20}]
 
 Username: user14; Password: pw14
-TotalMeals: 420
-TotalPoints: 250
-RemainingMeals: 97
-RemainingPoints: 51
-Transactions: [{'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 3, 'Points': 15}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 20}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}]
+TotalMeals: 0
+TotalPoints: 1980
+RemainingMeals: 0
+RemainingPoints: 322
+Transactions: [{'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 34}]
 
 Username: user15; Password: pw15
 TotalMeals: 0
 TotalPoints: 1980
 RemainingMeals: 0
-RemainingPoints: 606
-Transactions: [{'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 16}]
+RemainingPoints: 469
+Transactions: [{'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 12}]
 
 Username: user16; Password: pw16
+TotalMeals: 420
+TotalPoints: 250
+RemainingMeals: 95
+RemainingPoints: 20
+Transactions: [{'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 25}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 20}, {'Meals': 3, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 15}, {'Meals': 0, 'Points': 0}]
+
+Username: user17; Password: pw17
 TotalMeals: 0
 TotalPoints: 1980
 RemainingMeals: 0
-RemainingPoints: 77
-Transactions: [{'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 12}]
-
-Username: user17; Password: pw17
-TotalMeals: 420
-TotalPoints: 250
-RemainingMeals: 52
-RemainingPoints: 23
-Transactions: [{'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 20}, {'Meals': 4, 'Points': 0}, {'Meals': 1, 'Points': 8}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 15}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}]
+RemainingPoints: 148
+Transactions: [{'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 28}]
 
 Username: user18; Password: pw18
 TotalMeals: 0
 TotalPoints: 1980
 RemainingMeals: 0
-RemainingPoints: 152
-Transactions: [{'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 17}]
+RemainingPoints: 363
+Transactions: [{'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 14}]
 
 Username: user19; Password: pw19
-TotalMeals: 420
-TotalPoints: 250
-RemainingMeals: 123
-RemainingPoints: 66
-Transactions: [{'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 12}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 30}, {'Meals': 2, 'Points': 20}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}]
+TotalMeals: 0
+TotalPoints: 1980
+RemainingMeals: 0
+RemainingPoints: 477
+Transactions: [{'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 18}]
 
 Username: user20; Password: pw20
 TotalMeals: 0
 TotalPoints: 1980
 RemainingMeals: 0
-RemainingPoints: 465
-Transactions: [{'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 34}]
+RemainingPoints: 691
+Transactions: [{'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 28}]
 
 Username: user21; Password: pw21
 TotalMeals: 420
 TotalPoints: 250
-RemainingMeals: 62
-RemainingPoints: 73
-Transactions: [{'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 15}, {'Meals': 3, 'Points': 25}, {'Meals': 4, 'Points': 20}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}]
+RemainingMeals: 227
+RemainingPoints: 46
+Transactions: [{'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 12}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 1, 'Points': 20}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 20}, {'Meals': 4, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 25}, {'Meals': 1, 'Points': 0}, {'Meals': 1, 'Points': 8}, {'Meals': 4, 'Points': 12}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}]
 
 Username: user22; Password: pw22
 TotalMeals: 420
 TotalPoints: 250
-RemainingMeals: 246
-RemainingPoints: 23
-Transactions: [{'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 15}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 12}, {'Meals': 3, 'Points': 12}, {'Meals': 2, 'Points': 0}]
+RemainingMeals: 219
+RemainingPoints: 60
+Transactions: [{'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 12}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 1, 'Points': 15}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 1, 'Points': 15}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 3, 'Points': 8}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 25}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 15}, {'Meals': 2, 'Points': 0}]
 
 Username: user23; Password: pw23
 TotalMeals: 0
 TotalPoints: 1980
 RemainingMeals: 0
-RemainingPoints: 39
-Transactions: [{'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 17}]
+RemainingPoints: 360
+Transactions: [{'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 32}]
 
 Username: user24; Password: pw24
-TotalMeals: 0
-TotalPoints: 1980
-RemainingMeals: 0
-RemainingPoints: 670
-Transactions: [{'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 29}]
+TotalMeals: 420
+TotalPoints: 250
+RemainingMeals: 244
+RemainingPoints: 63
+Transactions: [{'Meals': 2, 'Points': 30}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 0, 'Points': 8}, {'Meals': 1, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 12}, {'Meals': 3, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 0, 'Points': 0}]
 
 Username: user25; Password: pw25
 TotalMeals: 0
 TotalPoints: 1980
 RemainingMeals: 0
-RemainingPoints: 681
-Transactions: [{'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 22}]
+RemainingPoints: 682
+Transactions: [{'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 17}]
 
 Username: user26; Password: pw26
-TotalMeals: 0
-TotalPoints: 1980
-RemainingMeals: 0
-RemainingPoints: 511
-Transactions: [{'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 33}]
+TotalMeals: 420
+TotalPoints: 250
+RemainingMeals: 90
+RemainingPoints: 47
+Transactions: [{'Meals': 0, 'Points': 8}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 12}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 25}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 4, 'Points': 0}]
 
 Username: user27; Password: pw27
-TotalMeals: 420
-TotalPoints: 250
-RemainingMeals: 214
-RemainingPoints: 33
-Transactions: [{'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 8}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 30}, {'Meals': 0, 'Points': 0}, {'Meals': 4, 'Points': 15}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 30}, {'Meals': 1, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 20}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 25}, {'Meals': 2, 'Points': 30}, {'Meals': 2, 'Points': 0}]
-
-Username: user28; Password: pw28
 TotalMeals: 0
 TotalPoints: 1980
 RemainingMeals: 0
-RemainingPoints: 224
-Transactions: [{'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 10}]
+RemainingPoints: 664
+Transactions: [{'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 10}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 27}]
 
-Username: user29; Password: pw29
+Username: user28; Password: pw28
 TotalMeals: 420
 TotalPoints: 250
-RemainingMeals: 36
-RemainingPoints: 23
-Transactions: [{'Meals': 1, 'Points': 8}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 15}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 12}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 8}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}]
+RemainingMeals: 54
+RemainingPoints: 63
+Transactions: [{'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 20}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 0, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 12}, {'Meals': 2, 'Points': 0}, {'Meals': 4, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 3, 'Points': 0}, {'Meals': 2, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 1, 'Points': 0}, {'Meals': 4, 'Points': 0}]
+
+Username: user29; Password: pw29
+TotalMeals: 0
+TotalPoints: 1980
+RemainingMeals: 0
+RemainingPoints: 522
+Transactions: [{'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 28}]
 
 Username: user30; Password: pw30
 TotalMeals: 0
 TotalPoints: 1980
 RemainingMeals: 0
-RemainingPoints: 252
-Transactions: [{'Meals': 0, 'Points': 21}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 29}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 28}, {'Meals': 0, 'Points': 15}, {'Meals': 0, 'Points': 34}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 31}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 24}, {'Meals': 0, 'Points': 13}]
+RemainingPoints: 436
+Transactions: [{'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 25}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 14}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 20}, {'Meals': 0, 'Points': 17}, {'Meals': 0, 'Points': 11}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 13}, {'Meals': 0, 'Points': 12}, {'Meals': 0, 'Points': 27}, {'Meals': 0, 'Points': 22}, {'Meals': 0, 'Points': 19}, {'Meals': 0, 'Points': 33}, {'Meals': 0, 'Points': 18}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 35}, {'Meals': 0, 'Points': 32}, {'Meals': 0, 'Points': 16}, {'Meals': 0, 'Points': 30}, {'Meals': 0, 'Points': 23}, {'Meals': 0, 'Points': 26}, {'Meals': 0, 'Points': 29}]
+
