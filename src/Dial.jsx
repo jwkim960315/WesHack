@@ -18,26 +18,26 @@ const Dial = ({ data }) => {
   const dialWrapperRef = useRef(null);
   const [rerender, setRerender] = useState(false);
 
-  // useEffect(() => {
-  //   setRerender(prevRerender => !prevRerender);
-  // }, [dialWrapperRef]);
-
-  // var pastSpendingRate = 10;
-  // var moneyUnit = isPoints ? " points" : " meals";
-
   useEffect(() => {
     const hasMeals = data.totalMeals !== 0;
     const hasPoints = data.totalPoints !== 0;
-    var remPtsRate = (data.remainingPoints / remainingDays).toFixed(2);
-    var remMealsRate = (data.remainingMeals / remainingDays).toFixed(1);
-    var currRate = hasPoints ? remPtsRate : remMealsRate;
     var unit = hasPoints ? "Points" : "Meals";
     var pastRate = calculateWeightedAvg(data.transactions, unit);
-    console.log(pastRate);
+    // console.log(pastRate);
 
     var currDay = new Date();
     var dayOfTheWeek = currDay.getDay();
     dayOfTheWeek = dayOfTheWeek !== 0 ? dayOfTheWeek : 7;
+    var remAmt = calculateRem(
+      data.transactions,
+      data.remainingMeals,
+      data.remainingPoints,
+      units[1],
+      dayOfTheWeek
+    );
+    var remPtsRate = (remAmt.points / remainingDays).toFixed(2);
+    var remMealsRate = (remAmt.meals / remainingDays).toFixed(1);
+    var currRate = hasPoints ? remPtsRate : remMealsRate;
 
     setIsPoints(hasPoints);
     setGoal(currRate);
@@ -48,6 +48,41 @@ const Dial = ({ data }) => {
 
   var spendingRatio = past / goal;
   var spendingDisplay = Math.min(2, spendingRatio);
+
+  function calculateRem(
+    transactions,
+    remainingMeals,
+    remainingPoints,
+    timePeriod,
+    date
+  ) {
+    var remainingMealsSince = remainingMeals;
+    var remainingPointsSince = remainingPoints;
+    if (timePeriod === "day") {
+      remainingMealsSince += transactions[transactions.length - 1]["Meals"];
+      remainingPointsSince += transactions[transactions.length - 1]["Points"];
+    } else if (timePeriod === "week") {
+      for (var i = 0; i < date; i++) {
+        remainingMealsSince +=
+          transactions[transactions.length - 1 - i]["Meals"];
+        remainingPointsSince +=
+          transactions[transactions.length - 1 - i]["Points"];
+      }
+    } else {
+      for (var i = 0; i < date + 7; i++) {
+        remainingMealsSince +=
+          transactions[transactions.length - 1 - i]["Meals"];
+        remainingPointsSince +=
+          transactions[transactions.length - 1 - i]["Points"];
+      }
+    }
+    // console.log(remainingPoints, remainingPointsSince);
+    // console.log(remainingMeals, remainingMealsSince);
+    return {
+      points: remainingPointsSince,
+      meals: remainingMealsSince,
+    };
+  }
 
   const spending = () => {
     if (spendingRatio > 1.75) {
@@ -106,7 +141,6 @@ const Dial = ({ data }) => {
     var alpha = 0.3;
     var weightedavg = 0;
     for (var i = 0; i < transactions.length; i++) {
-      console.log(transactions[i]["Meals"], i);
       weightedavg +=
         transactions[i][label] *
         alpha *
@@ -117,13 +151,10 @@ const Dial = ({ data }) => {
 
   return (
     <div style={{ textAlign: "center" }}>
-      {/* <div style={{ display: "inline-block" }}>Underspending</div> */}
       <div ref={dialWrapperRef}>
         <ReactSpeedometer
           startColor={"#34c9eb"}
           endColor={"#FF471A"}
-          // width={Math.max(dialWrapperRef.current.offsetWidth * 0.6, 300)}
-          // height={Math.max(dialWrapperRef.current.offsetWidth * 0.35, 175)}
           width={Math.max(
             dialWrapperRef.current
               ? dialWrapperRef.current.offsetWidth * 0.6
