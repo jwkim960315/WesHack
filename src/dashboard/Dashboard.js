@@ -148,6 +148,7 @@ export default function Dashboard() {
   const [isPoints, setIsPoints] = useState(null);
   const [goal, setGoal] = useState(null);
   const [past, setPast] = useState(null);
+  const [left, setLeft] = useState(null);
   const [moneyUnit, setMoneyUnit] = useState(null);
   const [spendingRatio, setRatio] = useState(null);
 
@@ -182,11 +183,23 @@ export default function Dashboard() {
         units[1],
         dayOfTheWeek
       );
+      var remInPeriod = calculateRem(
+        dataFromJson.transactions,
+        0,
+        0,
+        units[1],
+        dayOfTheWeek
+      );
+
       var remPtsRate = (remAmt.points / remainingDays).toFixed(2);
       var remMealsRate = (remAmt.meals / remainingDays).toFixed(1);
       var currRate = hasPoints ? remPtsRate : remMealsRate;
 
       setIsPoints(hasPoints);
+      // console.log(remInPeriod.points);
+      setLeft(
+        Math.round(convertSpending(currRate, "week")) - remInPeriod.points
+      );
       setGoal(currRate);
       setPast(pastRate);
       setMoneyUnit(unit);
@@ -215,10 +228,10 @@ export default function Dashboard() {
             {/* Dial */}
             <Grid item xs={12} md={7} lg={5}>
               <Paper className={fixedHeightPaper}>
-                {goal && (
+                {goal && left && (
                   <Progress
-                    goal={Math.round(convertSpending(goal, timeUnit))}
-                    left={7}
+                    goal={Math.round(convertSpending(goal, "week"))}
+                    left={left}
                   />
                 )}
               </Paper>

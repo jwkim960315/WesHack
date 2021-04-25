@@ -44,12 +44,11 @@ export function calculateWeightedAvg(transactions, label) {
   return weightedavg;
 }
 
-export function convertSpending(goal, timeUnit) {
+export function convertSpending(goalAmt, timeUnit) {
   if (timeUnit === "week") {
-    return (goal * 7).toFixed(2);
+    return (goalAmt * 7).toFixed(2);
   } else {
-    return goal.toFixed(2);
+    console.log(goalAmt);
+    return goalAmt.toFixed(2);
   }
 }
-
-export function mealsLeftInPeriod() {}
