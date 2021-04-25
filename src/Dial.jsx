@@ -14,6 +14,7 @@ const Dial = ({ data }) => {
   const [goal, setGoal] = useState(null);
   const [past, setPast] = useState(null);
   const [moneyUnit, setMoneyUnit] = useState(null);
+  const [spendingRatio, setRatio] = useState(null);
 
   const dialWrapperRef = useRef(null);
   const [rerender, setRerender] = useState(false);
@@ -44,10 +45,11 @@ const Dial = ({ data }) => {
     setPast(pastRate);
     setMoneyUnit(unit);
     setRerender((prevRerender) => !prevRerender);
+    setRatio(pastRate / currRate);
   }, [data, dialWrapperRef]);
 
-  var spendingRatio = past / goal;
-  var spendingDisplay = Math.min(2, spendingRatio);
+  // var spendingRatio = past / goal;
+  // var spendingDisplay = Math.min(2, spendingRatio);
 
   function calculateRem(
     transactions,
@@ -114,8 +116,11 @@ const Dial = ({ data }) => {
     } else if (spendingRatio > 0.75) {
       return "#2af239";
     } else if (spendingRatio > 0.25) {
+      console.log("hi");
       return "#2eef97";
     } else {
+      console.log("hiii");
+      console.log(spendingRatio);
       return "#33dfec";
     }
   };
@@ -149,55 +154,74 @@ const Dial = ({ data }) => {
     return weightedavg;
   }
 
-  return (
-    <div style={{ textAlign: "center" }}>
-      <div ref={dialWrapperRef}>
-        <ReactSpeedometer
-          startColor={"#34c9eb"}
-          endColor={"#FF471A"}
-          width={Math.max(
-            dialWrapperRef.current
-              ? dialWrapperRef.current.offsetWidth * 0.6
-              : 0,
-            300
-          )}
-          height={Math.max(
-            dialWrapperRef.current
-              ? dialWrapperRef.current.offsetWidth * 0.35
-              : 0,
-            175
-          )}
-          maxSegmentLabels={0}
-          segments={51}
-          value={spendingDisplay}
-          currentValueText={spending()}
-          valueTextFontSize={"30px"}
-          maxValue={2}
-          ringWidth={60}
-          textColor={getColor()}
-        />
+  if (spendingRatio) {
+    return (
+      <div
+        style={{
+          height: "100%",
+          display: "flex",
+          justifyContent: "space-between",
+          margin: "auto",
+          alignItems: "center",
+        }}
+      >
+        <div ref={dialWrapperRef}>
+          <ReactSpeedometer
+            startColor={"#34c9eb"}
+            endColor={"#FF471A"}
+            width={Math.max(
+              dialWrapperRef.current
+                ? dialWrapperRef.current.offsetWidth * 0.7
+                : 0,
+              300
+            )}
+            height={Math.max(
+              dialWrapperRef.current
+                ? dialWrapperRef.current.offsetWidth * 0.4
+                : 0,
+              200
+            )}
+            maxSegmentLabels={0}
+            segments={51}
+            value={Math.min(2, spendingRatio)}
+            currentValueText={spending()}
+            valueTextFontSize={"30px"}
+            maxValue={2}
+            ringWidth={60}
+            textColor={getColor()}
+          />
+        </div>
+        <div style={{ marginLeft: 20 }}>
+          <div style={{ width: "300px", margin: "auto" }}>
+            Based on the past month's data, you have a{" "}
+            <span style={{ color: getColor() }} className="predicted">
+              predicted
+            </span>{" "}
+            spending rate of
+            <span
+              style={{ color: getColor(), display: "block" }}
+              className="predicted"
+            >
+              {" " +
+                convertSpending(past) +
+                " " +
+                moneyUnit +
+                " per " +
+                timeUnit}
+            </span>
+          </div>
+          <div style={{ marginTop: 20 }}>
+            For the next week, you <span className="suggestion">can</span> spend{" "}
+            <span className="suggestion" style={{ display: "block" }}>
+              {convertSpending(goal) + " " + moneyUnit}
+            </span>
+          </div>
+        </div>
       </div>
-      <div style={{ width: "300px", margin: "auto" }}>
-        Based on the past month's data, you have a{" "}
-        <span style={{ color: getColor() }} className="predicted">
-          predicted
-        </span>{" "}
-        spending rate of
-        <span
-          style={{ color: getColor(), display: "block" }}
-          className="predicted"
-        >
-          {" " + convertSpending(past) + " " + moneyUnit + " per " + timeUnit}
-        </span>
-      </div>
-      <div style={{ marginTop: 20 }}>
-        For the next week, you <span className="suggestion">can</span> spend{" "}
-        <span className="suggestion" style={{ display: "block" }}>
-          {convertSpending(goal) + " " + moneyUnit}
-        </span>
-      </div>
-    </div>
-  );
+    );
+  } else {
+    return <div></div>;
+  }
 };
 
 export default Dial;
