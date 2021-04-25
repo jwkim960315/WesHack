@@ -61,13 +61,27 @@ const Dial = ({ goal, past, timeUnit, moneyUnit, spendingRatio }) => {
   if (spendingRatio) {
     return (
       <div style={{ height: "100%" }}>
-        <div
-          style={{
-            fontSize: 20,
-            color: "#ff5722",
-          }}
-        >
-          Past Trends
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div
+            style={{
+              fontSize: 20,
+              color: "#ff5722",
+            }}
+          >
+            Past Trends
+          </div>
+          <div className="small-circle tooltip">
+            ?
+            <div className="tooltiptext">
+              The predicted spending rate is calculated using a weighted average
+              of your transactions in the past month. More weight is put on more
+              recent transcations in order to accurately capture trend. Your
+              predicted spending rate is compared with the suggested spending
+              rate to determine whether you are under or over spending. Analysis
+              may differ between 'week' and 'day' settings because the suggested
+              spending rate is updated more often for the latter.
+            </div>
+          </div>
         </div>
         <div
           style={{

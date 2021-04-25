@@ -29,7 +29,7 @@ export default function Chart(props) {
   const data = dataSeq;
   return (
     <React.Fragment>
-      <Title>{moneyUnit} Used in Last Month</Title>
+      <Title>{moneyUnit} Used in the Last Month</Title>
       <ResponsiveContainer>
         <LineChart
           data={data}

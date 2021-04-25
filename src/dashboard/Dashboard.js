@@ -116,7 +116,7 @@ const useStyles = makeStyles((theme) => ({
     height: 500,
   },
   fixedChartHeight: {
-    height: 300,
+    height: 325,
   },
   fixedDateHeight: {
     height: 100,
