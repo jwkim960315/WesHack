@@ -189,6 +189,8 @@ const Dial = ({ data }) => {
             maxValue={2}
             ringWidth={60}
             textColor={getColor()}
+            paddingHorizontal={20}
+            paddingVertical={20}
           />
         </div>
         <div style={{ marginLeft: 20 }}>
@@ -211,7 +213,7 @@ const Dial = ({ data }) => {
             </span>
           </div>
           <div style={{ marginTop: 20 }}>
-            For the next week, you <span className="suggestion">can</span> spend{" "}
+            For this week, you <span className="suggestion">can</span> spend{" "}
             <span className="suggestion" style={{ display: "block" }}>
               {convertSpending(goal) + " " + moneyUnit}
             </span>
