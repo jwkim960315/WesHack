@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Cookies from 'universal-cookie';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
@@ -26,20 +25,8 @@ import Orders from './Orders';
 import Dial from '../Dial';
 import Progress from '../Progress';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import deepOrange from '@material-ui/core/colors/deepOrange';
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Goldilock
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+import Navbar from './Navbar';
+import { typeEnum, timePeriodEnum } from './enums';
 
 const drawerWidth = 240;
 
@@ -125,16 +112,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const darkTheme = createMuiTheme({
-  palette: {
-    type: 'dark',
-    primary: {
-      main: deepOrange[500]
-    }
-  }
-});
-
 export default function Dashboard() {
+  const [type, setType] = useState(typeEnum.MEALS);
+  const [timePeriod, setTimePeriod] = useState(timePeriodEnum.WEEK);
+
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -148,7 +129,7 @@ export default function Dashboard() {
 
   const cookies = new Cookies();
   const username = cookies.get('appUsername');
-  var jsonName = './testUsers/' + username + '.json';
+  var jsonName = `./testUsers/${username}.json`;
   const [data, setData] = useState(null);
 
   const getData = async () => {
@@ -171,53 +152,38 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <ThemeProvider theme={darkTheme}>
-      <div className={classes.root}>
-        <CssBaseline />
-        <AppBar position="absolute">
-          <Toolbar className={classes.toolbar}>
-            <Typography
-              component="h1"
-              variant="h6"
-              color="inherit"
-              noWrap
-              className={classes.title}
-            >
-              Dashboard
-            </Typography>
-            <IconButton color="inherit"></IconButton>
-          </Toolbar>
-        </AppBar>
-        <main className={classes.content}>
-          <div className={classes.appBarSpacer} />
-          <Container maxWidth="lg" className={classes.container}>
-            <Grid container spacing={3}>
-              {/* Progress Bar */}
-              <Grid item xs={12} md={5} lg={7}>
-                <Paper className={fixedHeightPaper}>
-                  {data && <Dial data={data} />}
-                </Paper>
-              </Grid>
-              {/* Dial */}
-              <Grid item xs={12} md={7} lg={5}>
-                <Paper className={fixedHeightPaper}>
-                  {data && <Progress data={data} />}
-                </Paper>
-              </Grid>
-              {/* Chart */}
-              <Grid item xs={12}>
-                <Paper className={fixedHeightChartPaper}>
-                  {data && <Chart transactions={data.transactions} />}
-                </Paper>
-              </Grid>
+    <div className={classes.root}>
+      <Navbar
+        type={type}
+        setType={setType}
+        timePeriod={timePeriod}
+        setTimePeriod={setTimePeriod}
+      />
+      <main className={classes.content}>
+        <div className={classes.appBarSpacer} />
+        <Container maxWidth="lg" className={classes.container}>
+          <Grid container spacing={3}>
+            {/* Progress Bar */}
+            <Grid item xs={12} md={5} lg={7}>
+              <Paper className={fixedHeightPaper}>
+                {data && <Dial data={data} />}
+              </Paper>
             </Grid>
-            {/* CopyRight */}
-            {/* <Box pt={4}>
-              <Copyright />
-            </Box> */}
-          </Container>
-        </main>
-      </div>
-    </ThemeProvider>
+            {/* Dial */}
+            <Grid item xs={12} md={7} lg={5}>
+              <Paper className={fixedHeightPaper}>
+                {data && <Progress data={data} />}
+              </Paper>
+            </Grid>
+            {/* Chart */}
+            <Grid item xs={12}>
+              <Paper className={fixedHeightChartPaper}>
+                {data && <Chart transactions={data.transactions} />}
+              </Paper>
+            </Grid>
+          </Grid>
+        </Container>
+      </main>
+    </div>
   );
 }
