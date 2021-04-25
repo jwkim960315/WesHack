@@ -195,14 +195,13 @@ export default function Dashboard() {
               {/* Progress Bar */}
               <Grid item xs={12} md={5} lg={7}>
                 <Paper className={fixedHeightPaper}>
-                  <Progress />
-                  {/* <Chart /> */}
+                  {data && <Dial data={data} />}
                 </Paper>
               </Grid>
               {/* Dial */}
               <Grid item xs={12} md={7} lg={5}>
                 <Paper className={fixedHeightPaper}>
-                  {data && <Dial data={data} />}
+                  <Progress />
                 </Paper>
               </Grid>
               {/* Chart */}

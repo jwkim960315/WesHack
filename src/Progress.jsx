@@ -13,7 +13,16 @@ const Progress = props => {
   const displayPoints = false;
   const [valueEnd, setValueEnd] = React.useState(valuePercentage);
   return (
-    <div style={{ padding: '40px 40px 40px 40px', margin: 'auto' }}>
+    <div
+      style={{
+        padding: '60px 60px 60px 60px',
+        margin: 'auto',
+        marginTop: 0,
+        display: 'flex',
+        width: 400,
+        position: 'relative'
+      }}
+    >
       <Wrapper
         label="Status Report"
         description={`Predicted spending rate: 70.00 points per week \n
@@ -32,41 +41,6 @@ const Progress = props => {
                 }
               }}
             />
-            //   <>
-            //     <div
-            //       style={{
-            //         position: 'absolute',
-            //         top: '50%',
-            //         left: '35%',
-            //         color: '#228B22',
-            //         marginTop: '10%',
-            //         fontSize: '0.5em'
-            //       }}
-            //     >
-            //       {`meals left`}
-            //     </div>
-            //     <CircularProgressbar
-            //       value={value}
-            //       text={`${15}/${20}`}
-            //       styles={{
-            //         // Customize the path, i.e. the "completed progress"
-            //         path: {
-            //           stroke: `rgba(0, 0, , ${value / 100})`,
-            //           transition: 'stroke-dashoffset 1.0s ease 1.0s'
-            //         },
-            //         // Customize the circle behind the path, i.e. the "total progress"
-            //         trail: {
-            //           // Trail color
-            //           stroke: '#228B22'
-            //         },
-            //         // Customize the text
-            //         text: {
-            //           fill: '#228B22'
-            //           // fontSize: '14px'
-            //         }
-            //       }}
-            //     />
-            //   </>
           )}
         </ProgressProvider>
       </Wrapper>
@@ -76,14 +50,10 @@ const Progress = props => {
 
 function Wrapper(props) {
   return (
-    <div style={{ marginBottom: 50 }}>
-      <div style={{ marginTop: 0, display: 'flex' }}>
-        <div style={{ width: 400, position: 'relative' }}>{props.children}</div>
-        <div style={{ marginLeft: 30 }}>
-          <h1>{props.label}:</h1>
-          <p>{props.description}</p>
-        </div>
-      </div>
+    <div style={{ marginTop: 0 }}>
+      <div style={{ width: 200, position: 'relative' }}>{props.children}</div>
+      {/* <h1>{props.label}:</h1> */}
+      <p>{props.description}</p>
     </div>
   );
 }

@@ -18,7 +18,7 @@ function createData(time, amount) {
 export default function Chart(props) {
   const theme = useTheme();
   const userData = props.transactions;
-  const showMeal = true;
+  const showMeal = false;
 
   let dataSeq = [];
   for (let i = 0; i < userData.length; i++) {
