@@ -112,7 +112,8 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
   },
   fixedHeight: {
-    height: 350,
+    // height: 350,
+    height: 500,
   },
   fixedChartHeight: {
     height: 300,
@@ -268,7 +269,7 @@ export default function Dashboard() {
               </Paper>
             </Grid>
             {/* Dial */}
-            <Grid item xs={12} md={5} lg={7}>
+            <Grid item xs={12} md={5} lg={5}>
               <Paper className={fixedHeightPaper}>
                 {data && (
                   <Dial
@@ -282,7 +283,7 @@ export default function Dashboard() {
               </Paper>
             </Grid>
             {/* Progress Bar */}
-            <Grid item xs={12} md={7} lg={5}>
+            <Grid item xs={12} md={7} lg={7}>
               <Paper className={fixedHeightPaper}>
                 {goal && left !== null && (
                   <Progress
