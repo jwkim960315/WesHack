@@ -2,35 +2,37 @@ import React, { useState, useEffect } from "react";
 import Cookies from "universal-cookie";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
-import Drawer from "@material-ui/core/Drawer";
-import Box from "@material-ui/core/Box";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import List from "@material-ui/core/List";
-import Typography from "@material-ui/core/Typography";
-import Divider from "@material-ui/core/Divider";
-import IconButton from "@material-ui/core/IconButton";
+// import Drawer from "@material-ui/core/Drawer";
+// import Box from "@material-ui/core/Box";
+// import AppBar from "@material-ui/core/AppBar";
+// import Toolbar from "@material-ui/core/Toolbar";
+// import List from "@material-ui/core/List";
+// import Typography from "@material-ui/core/Typography";
+// import Divider from "@material-ui/core/Divider";
+// import IconButton from "@material-ui/core/IconButton";
 import Badge from "@material-ui/core/Badge";
 import Container from "@material-ui/core/Container";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Link from "@material-ui/core/Link";
-import MenuIcon from "@material-ui/icons/Menu";
-import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import NotificationsIcon from "@material-ui/icons/Notifications";
+// import MenuIcon from "@material-ui/icons/Menu";
+// import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
+// import NotificationsIcon from "@material-ui/icons/Notifications";
 import { mainListItems, secondaryListItems } from "./listItems";
 import Chart from "./Chart";
-import Deposits from "./Deposits";
-import Orders from "./Orders";
+// import Deposits from "./Deposits";
+// import Orders from "./Orders";
 import Dial from "../Dial";
 import Progress from "../Progress";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+// import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Navbar from "./Navbar";
 import { typeEnum, timePeriodEnum } from "./enums";
 import {
   calculateRem,
   calculateWeightedAvg,
   convertSpending,
+  getPreviousMonday,
+  getNextSunday,
 } from "../calculations.js";
 
 const drawerWidth = 240;
@@ -112,8 +114,12 @@ const useStyles = makeStyles((theme) => ({
   fixedHeight: {
     height: 350,
   },
-  fixedChartHeigt: {
+  fixedChartHeight: {
     height: 300,
+  },
+  fixedDateHeight: {
+    height: 100,
+    textAlign: "center",
   },
 }));
 
@@ -131,7 +137,8 @@ export default function Dashboard() {
     setOpen(false);
   };
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
-  const fixedHeightChartPaper = clsx(classes.paper, classes.fixedChartHeigt);
+  const fixedHeightChartPaper = clsx(classes.paper, classes.fixedChartHeight);
+  const fixedDateChartPaper = clsx(classes.paper, classes.fixedDateHeight);
 
   const cookies = new Cookies();
   const username = cookies.get("appUsername");
@@ -141,6 +148,9 @@ export default function Dashboard() {
   const lastDay = new Date("May 22, 2021 00:00:00");
   var remainingDays = (lastDay - Date.now()) / 1000 / 24 / 60 / 60;
   remainingDays = Math.ceil(remainingDays);
+  const todayDateString = new Date(Date.now()).toLocaleDateString();
+  const prevMondayString = new Date(getPreviousMonday()).toLocaleDateString();
+  const nextSundayString = new Date(getNextSunday()).toLocaleDateString();
 
   const [goal, setGoal] = useState(null);
   const [past, setPast] = useState(null);
@@ -242,7 +252,22 @@ export default function Dashboard() {
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
-            {/* Progress Bar */}
+            <Grid item xs={12}>
+              <Paper className={fixedDateChartPaper}>
+                <div
+                  style={{
+                    fontSize: 50,
+                    color: "#ff5722",
+                    height: "100%",
+                  }}
+                >
+                  {timePeriod === timePeriodEnum.WEEK
+                    ? prevMondayString + " - " + nextSundayString
+                    : todayDateString}
+                </div>
+              </Paper>
+            </Grid>
+            {/* Dial */}
             <Grid item xs={12} md={5} lg={7}>
               <Paper className={fixedHeightPaper}>
                 {data && (
@@ -256,7 +281,7 @@ export default function Dashboard() {
                 )}
               </Paper>
             </Grid>
-            {/* Dial */}
+            {/* Progress Bar */}
             <Grid item xs={12} md={7} lg={5}>
               <Paper className={fixedHeightPaper}>
                 {goal && left !== null && (

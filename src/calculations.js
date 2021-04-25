@@ -51,3 +51,16 @@ export function convertSpending(goalAmt, timeUnit) {
     return goalAmt.toFixed(2);
   }
 }
+
+export function getPreviousMonday() {
+  // https://stackoverflow.com/questions/35088088/javascript-for-getting-the-previous-monday
+  var prevMonday = new Date();
+  prevMonday.setDate(prevMonday.getDate() - ((prevMonday.getDay() + 6) % 7));
+  return prevMonday;
+}
+
+export function getNextSunday() {
+  var nextSunday = new Date();
+  nextSunday.setDate(nextSunday.getDate() + (nextSunday.getDay() % 7));
+  return nextSunday;
+}
