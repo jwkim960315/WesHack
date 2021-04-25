@@ -138,7 +138,7 @@ const Dial = ({ data }) => {
 
   function calculateWeightedAvg(transactions, label) {
     //Exponential Recency Weighted Average
-    var alpha = 0.3;
+    var alpha = 0.15;
     var weightedavg = 0;
     for (var i = 0; i < transactions.length; i++) {
       weightedavg +=
