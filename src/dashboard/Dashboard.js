@@ -1,30 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { useTheme } from "@material-ui/core/styles";
 import Cookies from "universal-cookie";
 import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
-// import Drawer from "@material-ui/core/Drawer";
-// import Box from "@material-ui/core/Box";
-// import AppBar from "@material-ui/core/AppBar";
-// import Toolbar from "@material-ui/core/Toolbar";
-// import List from "@material-ui/core/List";
-// import Typography from "@material-ui/core/Typography";
-// import Divider from "@material-ui/core/Divider";
-// import IconButton from "@material-ui/core/IconButton";
-import Badge from "@material-ui/core/Badge";
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
-import Link from "@material-ui/core/Link";
-// import MenuIcon from "@material-ui/icons/Menu";
-// import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-// import NotificationsIcon from "@material-ui/icons/Notifications";
-import { mainListItems, secondaryListItems } from "./listItems";
+import {
+  useMediaQuery,
+  Paper,
+  Grid,
+  Container,
+  Typography,
+} from "@material-ui/core";
 import Chart from "./Chart";
-// import Deposits from "./Deposits";
-// import Orders from "./Orders";
 import Dial from "../Dial";
 import Progress from "../Progress";
-// import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 import Navbar from "./Navbar";
 import { typeEnum, timePeriodEnum } from "./enums";
 import {
@@ -34,6 +22,7 @@ import {
   getPreviousMonday,
   getNextSunday,
 } from "../calculations.js";
+import deepOrange from "@material-ui/core/colors/deepOrange";
 
 const drawerWidth = 240;
 
@@ -111,33 +100,32 @@ const useStyles = makeStyles((theme) => ({
     overflow: "auto",
     flexDirection: "column",
   },
-  fixedHeight: {
-    // height: 350,
-    height: 500,
+  paperHeight: {
+    height: "100%",
+    display: "flex",
+    alignItems: "center",
   },
   fixedChartHeight: {
     height: 325,
   },
   fixedDateHeight: {
     height: 100,
-    textAlign: "center",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
 }));
 
 export default function Dashboard() {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up("sm"));
   const [type, setType] = useState(null);
   // const [type, setType] = useState(typeEnum.POINTS);
   const [timePeriod, setTimePeriod] = useState(timePeriodEnum.WEEK);
 
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
-  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+
+  const minHeightPaper = clsx(classes.paper, classes.paperHeight);
   const fixedHeightChartPaper = clsx(classes.paper, classes.fixedChartHeight);
   const fixedDateChartPaper = clsx(classes.paper, classes.fixedDateHeight);
 
@@ -255,22 +243,20 @@ export default function Dashboard() {
           <Grid container spacing={3}>
             <Grid item xs={12}>
               <Paper className={fixedDateChartPaper}>
-                <div
-                  style={{
-                    fontSize: 50,
-                    color: "#ff5722",
-                    height: "100%",
-                  }}
+                <Typography
+                  component="div"
+                  color="primary"
+                  style={{ fontSize: matches ? 40 : 20 }}
                 >
                   {timePeriod === timePeriodEnum.WEEK
                     ? prevMondayString + " - " + nextSundayString
                     : todayDateString}
-                </div>
+                </Typography>
               </Paper>
             </Grid>
             {/* Dial */}
-            <Grid item xs={12} md={5} lg={5}>
-              <Paper className={fixedHeightPaper}>
+            <Grid item xs={12} md={5} lg={5} zeroMinWidth={false}>
+              <Paper className={minHeightPaper}>
                 {data && (
                   <Dial
                     goal={goal}
@@ -283,8 +269,8 @@ export default function Dashboard() {
               </Paper>
             </Grid>
             {/* Progress Bar */}
-            <Grid item xs={12} md={7} lg={7}>
-              <Paper className={fixedHeightPaper}>
+            <Grid item xs={12} md={7} lg={7} zeroMinWidth={false}>
+              <Paper className={minHeightPaper}>
                 {goal && left !== null && (
                   <Progress
                     goal={goal}

@@ -2,17 +2,23 @@
 // import { SportsRugbySharp } from "@material-ui/icons";
 import React, { useState, useEffect, useRef } from "react";
 import ReactSpeedometer from "react-d3-speedometer";
+import { Grid, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  header: {
+    fontSize: 20,
+  },
+});
 
 const Dial = ({ goal, past, timeUnit, moneyUnit, spendingRatio }) => {
+  const classes = useStyles();
   const dialWrapperRef = useRef(null);
   const [rerender, setRerender] = useState(false);
 
   useEffect(() => {
     setRerender((prevRerender) => !prevRerender);
   }, [dialWrapperRef]);
-
-  // var spendingRatio = past / goal;
-  // var spendingDisplay = Math.min(2, spendingRatio);
 
   const spending = () => {
     if (spendingRatio > 1.75) {
@@ -50,92 +56,77 @@ const Dial = ({ goal, past, timeUnit, moneyUnit, spendingRatio }) => {
     }
   };
 
-  function getWindowDimensions() {
-    const { innerWidth: width, innerHeight: height } = window;
-    return {
-      width,
-      height,
-    };
-  }
-
   if (spendingRatio) {
     return (
-      <div style={{ height: "100%" }}>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <Grid container justify="center" alignItems="center" spacing={1}>
+        <Grid item xs={12}>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <Typography
+              className={classes.header}
+              color="primary"
+              component="div"
+            >
+              Past Trends
+            </Typography>
+            <div className="small-circle tooltip">
+              ?
+              <div className="tooltiptext">
+                The predicted spending rate is calculated using a weighted
+                average of your transactions in the past month. More weight is
+                put on more recent transcations in order to accurately capture
+                trend. Your predicted spending rate is compared with the
+                suggested spending rate to determine whether you are under or
+                over spending. Analysis may differ between 'week' and 'day'
+                settings because the suggested spending rate is updated more
+                often for the latter.
+              </div>
+            </div>
+          </div>
+        </Grid>
+        <Grid item>
+          <ReactSpeedometer
+            startColor={"#34c9eb"}
+            endColor={"#FF471A"}
+            width={300}
+            height={200}
+            maxSegmentLabels={0}
+            segments={51}
+            value={Math.min(2, spendingRatio)}
+            currentValueText={spending()}
+            valueTextFontSize={"30px"}
+            maxValue={2}
+            ringWidth={60}
+            textColor={getColor()}
+            paddingHorizontal={20}
+            paddingVertical={20}
+            forceRender={true}
+          />
+        </Grid>
+        <Grid item>
           <div
             style={{
-              fontSize: 20,
-              color: "#ff5722",
+              width: 250,
+              margin: "auto",
+              padding: 10,
+              backgroundColor: "#555",
             }}
           >
-            Past Trends
+            Based on the past month's data, you have a{" "}
+            <span style={{ color: getColor() }} className="predicted">
+              predicted
+            </span>{" "}
+            spending rate of
+            <span style={{ color: getColor() }} className="predicted">
+              {" " +
+                past +
+                " " +
+                moneyUnit.toLowerCase() +
+                " per " +
+                timeUnit.toLowerCase()}
+            </span>
           </div>
-          <div className="small-circle tooltip">
-            ?
-            <div className="tooltiptext">
-              The predicted spending rate is calculated using a weighted average
-              of your transactions in the past month. More weight is put on more
-              recent transcations in order to accurately capture trend. Your
-              predicted spending rate is compared with the suggested spending
-              rate to determine whether you are under or over spending. Analysis
-              may differ between 'week' and 'day' settings because the suggested
-              spending rate is updated more often for the latter.
-            </div>
-          </div>
-        </div>
-        <div
-          style={{
-            margin: "auto",
-            alignItems: "center",
-            textAlign: "center",
-          }}
-        >
-          <div ref={dialWrapperRef}>
-            <ReactSpeedometer
-              startColor={"#34c9eb"}
-              endColor={"#FF471A"}
-              width={300}
-              height={200}
-              maxSegmentLabels={0}
-              segments={51}
-              value={Math.min(2, spendingRatio)}
-              currentValueText={spending()}
-              valueTextFontSize={"30px"}
-              maxValue={2}
-              ringWidth={60}
-              textColor={getColor()}
-              paddingHorizontal={20}
-              paddingVertical={20}
-              forceRender={true}
-            />
-          </div>
-          <div style={{ marginLeft: 20 }}>
-            <div
-              style={{
-                width: 250,
-                margin: "auto",
-                padding: 10,
-                backgroundColor: "#555",
-                textAlign: "left",
-              }}
-            >
-              Based on the past month's data, you have a{" "}
-              <span style={{ color: getColor() }} className="predicted">
-                predicted
-              </span>{" "}
-              spending rate of
-              <span style={{ color: getColor() }} className="predicted">
-                {" " +
-                  past +
-                  " " +
-                  moneyUnit.toLowerCase() +
-                  " per " +
-                  timeUnit.toLowerCase()}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+        </Grid>
+      </Grid>
     );
   } else {
     return <div></div>;
