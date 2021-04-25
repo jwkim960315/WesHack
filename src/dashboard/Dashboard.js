@@ -118,7 +118,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Dashboard() {
-  const [type, setType] = useState(typeEnum.MEALS);
+  const [type, setType] = useState(null);
+  // const [type, setType] = useState(typeEnum.POINTS);
   const [timePeriod, setTimePeriod] = useState(timePeriodEnum.WEEK);
 
   const classes = useStyles();
@@ -137,20 +138,15 @@ export default function Dashboard() {
   var jsonName = `./testUsers/${username}.json`;
   const [data, setData] = useState(null);
 
-  const defaultConfig = 1;
-  const units = { 0: "day", 1: "week", 2: "2 weeks" };
-
   const lastDay = new Date("May 22, 2021 00:00:00");
   var remainingDays = (lastDay - Date.now()) / 1000 / 24 / 60 / 60;
   remainingDays = Math.ceil(remainingDays);
 
-  const [timeUnit, setTimeUnit] = useState(units[1]);
-  const [isPoints, setIsPoints] = useState(null);
   const [goal, setGoal] = useState(null);
   const [past, setPast] = useState(null);
   const [left, setLeft] = useState(null);
-  const [moneyUnit, setMoneyUnit] = useState(null);
   const [spendingRatio, setRatio] = useState(null);
+  const [valPercent, setValPercent] = useState(null);
 
   const getData = async () => {
     return (
@@ -168,53 +164,80 @@ export default function Dashboard() {
     (async () => {
       var dataFromJson = await getData();
       setData(dataFromJson);
-      const hasMeals = dataFromJson.totalMeals !== 0;
-      const hasPoints = dataFromJson.totalPoints !== 0;
-      var unit = hasPoints ? "Points" : "Meals";
-      var pastRate = calculateWeightedAvg(dataFromJson.transactions, unit);
-
-      var currDay = new Date();
-      var dayOfTheWeek = currDay.getDay();
-      dayOfTheWeek = dayOfTheWeek !== 0 ? dayOfTheWeek : 7;
-      var remAmt = calculateRem(
-        dataFromJson.transactions,
-        dataFromJson.remainingMeals,
-        dataFromJson.remainingPoints,
-        units[1],
-        dayOfTheWeek
-      );
-      var remInPeriod = calculateRem(
-        dataFromJson.transactions,
-        0,
-        0,
-        units[1],
-        dayOfTheWeek
-      );
-
-      var remPtsRate = (remAmt.points / remainingDays).toFixed(2);
-      var remMealsRate = (remAmt.meals / remainingDays).toFixed(1);
-      var currRate = hasPoints ? remPtsRate : remMealsRate;
-
-      setIsPoints(hasPoints);
-      // console.log(remInPeriod.points);
-      setLeft(
-        Math.round(convertSpending(currRate, "week")) - remInPeriod.points
-      );
-      setGoal(currRate);
-      setPast(pastRate);
-      setMoneyUnit(unit);
-      setRatio(pastRate / currRate);
+      const newType =
+        dataFromJson.totalMeals > dataFromJson.totalPoints
+          ? typeEnum.MEALS
+          : typeEnum.POINTS;
+      setType(newType);
+      getVars(newType, dataFromJson, timePeriodEnum.WEEK);
     })();
   }, []);
 
+  const getVars = (newType, dataFromJson, newTimePeriod) => {
+    newType = newType ? newType : type;
+    dataFromJson = dataFromJson ? dataFromJson : data;
+    newTimePeriod = newTimePeriod ? newTimePeriod : timePeriod;
+
+    var pastRate = calculateWeightedAvg(dataFromJson.transactions, newType);
+    pastRate = parseFloat(pastRate);
+    var currDay = new Date();
+    var dayOfTheWeek = currDay.getDay();
+    dayOfTheWeek = dayOfTheWeek !== 0 ? dayOfTheWeek : 7;
+    var sincePeriodStart =
+      newType === timePeriodEnum.DAY ? 0 : dayOfTheWeek - 1;
+
+    var remAmt = calculateRem(
+      dataFromJson.transactions,
+      dataFromJson.remainingMeals,
+      dataFromJson.remainingPoints,
+      newTimePeriod,
+      dayOfTheWeek
+    );
+    var remInPeriod = calculateRem(
+      dataFromJson.transactions,
+      0,
+      0,
+      newTimePeriod,
+      dayOfTheWeek
+    );
+
+    var remPtsRate = (
+      remAmt.points /
+      (remainingDays + sincePeriodStart)
+    ).toFixed(2);
+    var remMealsRate = (
+      remAmt.meals /
+      (remainingDays + sincePeriodStart)
+    ).toFixed(1);
+
+    var currRate = typeEnum.POINTS === newType ? remPtsRate : remMealsRate;
+    currRate = parseFloat(currRate);
+    var remInPeriodType =
+      typeEnum.POINTS === newType ? remInPeriod.points : remInPeriod.meals;
+    var goalForPeriod = Math.round(convertSpending(currRate, newTimePeriod));
+    var pastRatePeriod = convertSpending(pastRate, newTimePeriod);
+    var amtLeft = goalForPeriod - remInPeriodType;
+
+    setLeft(amtLeft);
+    setGoal(goalForPeriod);
+    setPast(pastRatePeriod);
+    setRatio(pastRate / currRate);
+    setValPercent(100 * (1 - amtLeft / goalForPeriod));
+  };
+
   return (
     <div className={classes.root}>
-      <Navbar
-        type={type}
-        setType={setType}
-        timePeriod={timePeriod}
-        setTimePeriod={setTimePeriod}
-      />
+      {type && data && (
+        <Navbar
+          type={type}
+          setType={setType}
+          timePeriod={timePeriod}
+          setTimePeriod={setTimePeriod}
+          getVars={getVars}
+          hasPoints={data.totalPoints > 0}
+          hasMeals={data.totalMeals > 0}
+        />
+      )}
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
@@ -222,16 +245,27 @@ export default function Dashboard() {
             {/* Progress Bar */}
             <Grid item xs={12} md={5} lg={7}>
               <Paper className={fixedHeightPaper}>
-                {data && <Dial data={data} />}
+                {data && (
+                  <Dial
+                    goal={goal}
+                    past={past}
+                    timeUnit={timePeriod}
+                    moneyUnit={type}
+                    spendingRatio={spendingRatio}
+                  />
+                )}
               </Paper>
             </Grid>
             {/* Dial */}
             <Grid item xs={12} md={7} lg={5}>
               <Paper className={fixedHeightPaper}>
-                {goal && left && (
+                {goal && left !== null && (
                   <Progress
-                    goal={Math.round(convertSpending(goal, "week"))}
+                    goal={goal}
                     left={left}
+                    timeUnit={timePeriod}
+                    moneyUnit={type}
+                    valuePercentage={valPercent}
                   />
                 )}
               </Paper>
@@ -239,7 +273,9 @@ export default function Dashboard() {
             {/* Chart */}
             <Grid item xs={12}>
               <Paper className={fixedHeightChartPaper}>
-                {data && <Chart transactions={data.transactions} />}
+                {data && (
+                  <Chart transactions={data.transactions} moneyUnit={type} />
+                )}
               </Paper>
             </Grid>
           </Grid>

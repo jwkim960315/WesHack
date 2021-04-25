@@ -5,21 +5,14 @@ import "react-circular-progressbar/dist/styles.css";
 
 import ProgressProvider from "./ProgressProvider";
 
-const Progress = ({ goal, left }) => {
-  // const goal = 20;
-  // const left = 15;
-  // console.log(goal, left);
-  // const [goalAmt, setGoalAmt] = useState(goal);
-  // const [leftAmt, setLeftAmt] = useState(left);
-
-  // useEffect(() => {
-  //   setGoalAmt(goal);
-  //   setLeftAmt(left);
-  //   console.log(goal, left);
-  // }, [goal, left]);
-  const valuePercentage = 100 * (1 - left / goal);
+const Progress = ({ goal, left, moneyUnit, timeUnit, valuePercentage }) => {
   const [valueEnd, setValueEnd] = React.useState(valuePercentage);
-  if (goal && left) {
+
+  useEffect(() => {
+    setValueEnd(valuePercentage);
+  }, [valuePercentage]);
+
+  if (goal && left !== null) {
     return (
       <div
         style={{
@@ -38,10 +31,10 @@ const Progress = ({ goal, left }) => {
                   left: "35%",
                   color: "#228B22",
                   marginTop: "10%",
-                  fontSize: "0.9em",
+                  fontSize: "1.4em",
                 }}
               >
-                {`meals left`}
+                {moneyUnit + ` left`}
               </div>
               <CircularProgressbar
                 value={value}

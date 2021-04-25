@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from 'react';
-import Cookies from 'universal-cookie';
-import { makeStyles } from '@material-ui/core/styles';
+import React, { useState, useRef, useEffect } from "react";
+import Cookies from "universal-cookie";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   TextField,
   FormControl,
@@ -13,48 +13,47 @@ import {
   Button,
   InputAdornment,
   IconButton,
-  FormHelperText
-} from '@material-ui/core';
-import Alert from '@material-ui/lab/Alert';
-import Visibility from '@material-ui/icons/Visibility';
-import VisibilityOff from '@material-ui/icons/VisibilityOff';
-import { useHistory, Redirect } from 'react-router-dom';
-import testData from './testUsersJson.json';
+  FormHelperText,
+} from "@material-ui/core";
+import Alert from "@material-ui/lab/Alert";
+import Visibility from "@material-ui/icons/Visibility";
+import VisibilityOff from "@material-ui/icons/VisibilityOff";
+import { useHistory, Redirect } from "react-router-dom";
+import testData from "./testUsersJson.json";
 
 // Styles setup
 const useStyles = makeStyles({
   container: {
-    height: '100vh'
+    height: "100vh",
   },
   alertContainer: {
-    width: '100%'
+    width: "100%",
   },
   alert: {
-    width: '100%'
+    width: "100%",
   },
   card: {
-    width: '100%',
-    maxWidth: 480
+    width: "100%",
+    maxWidth: 480,
   },
   cardContent: {
-    padding: '2rem'
+    padding: "2rem",
   },
   toggleLoginText: {
-    textDecoration: 'underline',
-    cursor: 'pointer'
-  }
+    textDecoration: "underline",
+    cursor: "pointer",
+  },
 });
 
 const LoginPage = () => {
-  console.log(testData);
   const history = useHistory();
 
   // Cookie
   const cookies = new Cookies();
 
   // Local States
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [usernameError, setUsernameError] = useState(null);
   const [passwordError, setPasswordError] = useState(null);
   const [showPassword, setShowPassword] = useState(false);
@@ -76,16 +75,16 @@ const LoginPage = () => {
     [showPassword]
   );
 
-  const appUsername = cookies.get('appUsername');
+  const appUsername = cookies.get("appUsername");
 
   if (appUsername != null) {
     return <Redirect to="/dashboard" />;
   }
 
-  const onSubmit = async e => {
+  const onSubmit = async (e) => {
     try {
-      console.log('username: ', username);
-      console.log('password: ', password);
+      // console.log("username: ", username);
+      // console.log("password: ", password);
       e.preventDefault();
 
       // form validation
@@ -103,10 +102,10 @@ const LoginPage = () => {
               testUsername === username && testPassword === password
           )
         ) {
-          cookies.set('appUsername', username, { path: '/' });
-          history.push('/dashboard');
+          cookies.set("appUsername", username, { path: "/" });
+          history.push("/dashboard");
         } else {
-          setRequestError('User does not exist.');
+          setRequestError("User does not exist.");
         }
       }
     } catch (err) {
@@ -143,13 +142,13 @@ const LoginPage = () => {
                   type="text"
                   variant="outlined"
                   value={username}
-                  onChange={e => {
+                  onChange={(e) => {
                     if (usernameError) {
                       setUsernameError(false);
                     }
                     setUsername(e.target.value);
                   }}
-                  helperText={usernameError && 'Username is required'}
+                  helperText={usernameError && "Username is required"}
                 />
               </FormControl>
             </Box>
@@ -161,9 +160,9 @@ const LoginPage = () => {
                   id="password-text-field"
                   label="Password"
                   inputRef={inputRef}
-                  type={showPassword ? 'text' : 'password'}
+                  type={showPassword ? "text" : "password"}
                   value={password}
-                  onChange={e => {
+                  onChange={(e) => {
                     if (passwordError) {
                       setPasswordError(false);
                     }
@@ -174,9 +173,11 @@ const LoginPage = () => {
                       <IconButton
                         aria-label="toggle password visibility"
                         onClick={() =>
-                          setShowPassword(prevShowPassword => !prevShowPassword)
+                          setShowPassword(
+                            (prevShowPassword) => !prevShowPassword
+                          )
                         }
-                        onMouseDown={e => e.preventDefault()}
+                        onMouseDown={(e) => e.preventDefault()}
                       >
                         {showPassword ? <Visibility /> : <VisibilityOff />}
                       </IconButton>
@@ -184,7 +185,7 @@ const LoginPage = () => {
                   }
                 />
                 <FormHelperText>
-                  {passwordError && 'Password is required'}
+                  {passwordError && "Password is required"}
                 </FormHelperText>
               </FormControl>
             </Box>

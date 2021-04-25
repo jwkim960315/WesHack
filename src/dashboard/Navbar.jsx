@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   AppBar,
   Toolbar,
@@ -8,29 +8,37 @@ import {
   IconButton,
   Menu,
   MenuItem,
-  Button
-} from '@material-ui/core';
-import { AccountCircle, ExpandMore } from '@material-ui/icons';
-import Cookies from 'universal-cookie';
-import { typeEnum, timePeriodEnum } from './enums';
+  Button,
+} from "@material-ui/core";
+import { AccountCircle, ExpandMore } from "@material-ui/icons";
+import Cookies from "universal-cookie";
+import { typeEnum, timePeriodEnum } from "./enums";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   toolbar: {
-    paddingRight: 24 // keep right padding when drawer closed
+    paddingRight: 24, // keep right padding when drawer closed
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
-    transition: theme.transitions.create(['width', 'margin'], {
+    transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen
-    })
+      duration: theme.transitions.duration.leavingScreen,
+    }),
   },
   title: {
-    flexGrow: 1
-  }
+    flexGrow: 1,
+  },
 }));
 
-const Navbar = ({ type, timePeriod, setType, setTimePeriod }) => {
+const Navbar = ({
+  type,
+  timePeriod,
+  setType,
+  setTimePeriod,
+  getVars,
+  hasPoints,
+  hasMeals,
+}) => {
   const history = useHistory();
   const cookies = new Cookies();
 
@@ -40,14 +48,14 @@ const Navbar = ({ type, timePeriod, setType, setTimePeriod }) => {
   const [userAnchorEl, setUserAnchorEl] = useState(null);
 
   // Type
-  const handleTypeMenu = event => setTypeAnchorEl(event.currentTarget);
+  const handleTypeMenu = (event) => setTypeAnchorEl(event.currentTarget);
 
   const handleTypeMenuClose = () => setTypeAnchorEl(null);
 
   const isTypeOpen = Boolean(typeAnchorEl);
 
   // Time Period
-  const handleTimePeriodMenu = event =>
+  const handleTimePeriodMenu = (event) =>
     setTimePeriodAnchorEl(event.currentTarget);
 
   const handleTimePeriodMenuClose = () => setTimePeriodAnchorEl(null);
@@ -55,15 +63,15 @@ const Navbar = ({ type, timePeriod, setType, setTimePeriod }) => {
   const isTimePeriodOpen = Boolean(timePeriodAnchorEl);
 
   // User
-  const handleUserMenu = event => setUserAnchorEl(event.currentTarget);
+  const handleUserMenu = (event) => setUserAnchorEl(event.currentTarget);
 
   const handleUserMenuClose = () => setUserAnchorEl(null);
 
   const isUserOpen = Boolean(userAnchorEl);
 
   const logOut = () => {
-    cookies.remove('appUsername');
-    history.push('/');
+    cookies.remove("appUsername");
+    history.push("/");
   };
 
   return (
@@ -94,33 +102,39 @@ const Navbar = ({ type, timePeriod, setType, setTimePeriod }) => {
           anchorEl={typeAnchorEl}
           getContentAnchorEl={null}
           anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'center'
+            vertical: "bottom",
+            horizontal: "center",
           }}
           keepMounted
           transformOrigin={{
-            vertical: 'top',
-            horizontal: 'center'
+            vertical: "top",
+            horizontal: "center",
           }}
           open={isTypeOpen}
           onClose={handleTypeMenuClose}
         >
-          <MenuItem
-            onClick={() => {
-              setType(typeEnum.MEALS);
-              handleTypeMenuClose();
-            }}
-          >
-            {typeEnum.MEALS}
-          </MenuItem>
-          <MenuItem
-            onClick={() => {
-              setType(typeEnum.POINTS);
-              handleTypeMenuClose();
-            }}
-          >
-            {typeEnum.POINTS}
-          </MenuItem>
+          {hasMeals && (
+            <MenuItem
+              onClick={() => {
+                setType(typeEnum.MEALS);
+                getVars(typeEnum.MEALS, null, null);
+                handleTypeMenuClose();
+              }}
+            >
+              {typeEnum.MEALS}
+            </MenuItem>
+          )}
+          {hasPoints && (
+            <MenuItem
+              onClick={() => {
+                setType(typeEnum.POINTS);
+                getVars(typeEnum.POINTS, null, null);
+                handleTypeMenuClose();
+              }}
+            >
+              {typeEnum.POINTS}
+            </MenuItem>
+          )}
         </Menu>
         {/* Time Period */}
         <Button
@@ -138,13 +152,13 @@ const Navbar = ({ type, timePeriod, setType, setTimePeriod }) => {
           anchorEl={timePeriodAnchorEl}
           getContentAnchorEl={null}
           anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'center'
+            vertical: "bottom",
+            horizontal: "center",
           }}
           keepMounted
           transformOrigin={{
-            vertical: 'top',
-            horizontal: 'center'
+            vertical: "top",
+            horizontal: "center",
           }}
           open={isTimePeriodOpen}
           onClose={handleTimePeriodMenuClose}
@@ -152,6 +166,7 @@ const Navbar = ({ type, timePeriod, setType, setTimePeriod }) => {
           <MenuItem
             onClick={() => {
               setTimePeriod(timePeriodEnum.DAY);
+              getVars(null, null, timePeriodEnum.DAY);
               handleTimePeriodMenuClose();
             }}
           >
@@ -160,19 +175,20 @@ const Navbar = ({ type, timePeriod, setType, setTimePeriod }) => {
           <MenuItem
             onClick={() => {
               setTimePeriod(timePeriodEnum.WEEK);
+              getVars(null, null, timePeriodEnum.WEEK);
               handleTimePeriodMenuClose();
             }}
           >
             {timePeriodEnum.WEEK}
           </MenuItem>
-          <MenuItem
+          {/* <MenuItem
             onClick={() => {
               setTimePeriod(timePeriodEnum.TWO_WEEKS);
               handleTimePeriodMenuClose();
             }}
           >
             {timePeriodEnum.TWO_WEEKS}
-          </MenuItem>
+          </MenuItem> */}
         </Menu>
         {/* User Profile */}
         <IconButton
@@ -189,18 +205,18 @@ const Navbar = ({ type, timePeriod, setType, setTimePeriod }) => {
           anchorEl={userAnchorEl}
           getContentAnchorEl={null}
           anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'center'
+            vertical: "bottom",
+            horizontal: "center",
           }}
           keepMounted
           transformOrigin={{
-            vertical: 'top',
-            horizontal: 'center'
+            vertical: "top",
+            horizontal: "center",
           }}
           open={isUserOpen}
           onClose={handleUserMenuClose}
         >
-          <MenuItem>User1</MenuItem>
+          {/* <MenuItem>User1</MenuItem> */}
           <MenuItem onClick={logOut}>Log Out</MenuItem>
         </Menu>
       </Toolbar>

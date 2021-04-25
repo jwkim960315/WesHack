@@ -7,10 +7,10 @@ export function calculateRem(
 ) {
   var remainingMealsSince = remainingMeals;
   var remainingPointsSince = remainingPoints;
-  if (timePeriod === "day") {
+  if (timePeriod === "Day") {
     remainingMealsSince += transactions[transactions.length - 1]["Meals"];
     remainingPointsSince += transactions[transactions.length - 1]["Points"];
-  } else if (timePeriod === "week") {
+  } else if (timePeriod === "Week") {
     for (var i = 0; i < date; i++) {
       remainingMealsSince += transactions[transactions.length - 1 - i]["Meals"];
       remainingPointsSince +=
@@ -45,10 +45,9 @@ export function calculateWeightedAvg(transactions, label) {
 }
 
 export function convertSpending(goalAmt, timeUnit) {
-  if (timeUnit === "week") {
+  if (timeUnit === "Week") {
     return (goalAmt * 7).toFixed(2);
   } else {
-    console.log(goalAmt);
     return goalAmt.toFixed(2);
   }
 }
