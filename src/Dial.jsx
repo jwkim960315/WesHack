@@ -1,5 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactSpeedometer from "react-d3-speedometer";
+import {
+  calculateRem,
+  calculateWeightedAvg,
+  convertSpending,
+} from "./calculations.js";
 
 const Dial = ({ data }) => {
   const defaultConfig = 1;
@@ -51,41 +56,6 @@ const Dial = ({ data }) => {
   // var spendingRatio = past / goal;
   // var spendingDisplay = Math.min(2, spendingRatio);
 
-  function calculateRem(
-    transactions,
-    remainingMeals,
-    remainingPoints,
-    timePeriod,
-    date
-  ) {
-    var remainingMealsSince = remainingMeals;
-    var remainingPointsSince = remainingPoints;
-    if (timePeriod === "day") {
-      remainingMealsSince += transactions[transactions.length - 1]["Meals"];
-      remainingPointsSince += transactions[transactions.length - 1]["Points"];
-    } else if (timePeriod === "week") {
-      for (var i = 0; i < date; i++) {
-        remainingMealsSince +=
-          transactions[transactions.length - 1 - i]["Meals"];
-        remainingPointsSince +=
-          transactions[transactions.length - 1 - i]["Points"];
-      }
-    } else {
-      for (var i = 0; i < date + 7; i++) {
-        remainingMealsSince +=
-          transactions[transactions.length - 1 - i]["Meals"];
-        remainingPointsSince +=
-          transactions[transactions.length - 1 - i]["Points"];
-      }
-    }
-    // console.log(remainingPoints, remainingPointsSince);
-    // console.log(remainingMeals, remainingMealsSince);
-    return {
-      points: remainingPointsSince,
-      meals: remainingMealsSince,
-    };
-  }
-
   const spending = () => {
     if (spendingRatio > 1.75) {
       return "Really Overspending";
@@ -116,20 +86,9 @@ const Dial = ({ data }) => {
     } else if (spendingRatio > 0.75) {
       return "#2af239";
     } else if (spendingRatio > 0.25) {
-      console.log("hi");
       return "#2eef97";
     } else {
-      console.log("hiii");
-      console.log(spendingRatio);
       return "#33dfec";
-    }
-  };
-
-  const convertSpending = (goal) => {
-    if (timeUnit === "week") {
-      return (goal * 7).toFixed(2);
-    } else {
-      return goal.toFixed(2);
     }
   };
 
@@ -139,19 +98,6 @@ const Dial = ({ data }) => {
       width,
       height,
     };
-  }
-
-  function calculateWeightedAvg(transactions, label) {
-    //Exponential Recency Weighted Average
-    var alpha = 0.15;
-    var weightedavg = 0;
-    for (var i = 0; i < transactions.length; i++) {
-      weightedavg +=
-        transactions[i][label] *
-        alpha *
-        Math.pow(1 - alpha, transactions.length - i - 1);
-    }
-    return weightedavg;
   }
 
   if (spendingRatio) {
@@ -205,7 +151,7 @@ const Dial = ({ data }) => {
               className="predicted"
             >
               {" " +
-                convertSpending(past) +
+                convertSpending(past, timeUnit) +
                 " " +
                 moneyUnit +
                 " per " +
@@ -213,9 +159,10 @@ const Dial = ({ data }) => {
             </span>
           </div>
           <div style={{ marginTop: 20 }}>
-            For this week, you <span className="suggestion">can</span> spend{" "}
-            <span className="suggestion" style={{ display: "block" }}>
-              {convertSpending(goal) + " " + moneyUnit}
+            For this week, it is <span className="suggestion">suggested </span>
+            you spend approximately{" "}
+            <span className="suggestion">
+              {Math.round(convertSpending(goal, timeUnit)) + " " + moneyUnit}
             </span>
           </div>
         </div>
