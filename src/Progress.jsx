@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
@@ -6,20 +6,6 @@ import 'react-circular-progressbar/dist/styles.css';
 import ProgressProvider from './ProgressProvider';
 
 const Progress = ({ data }) => {
-  const defaultConfig = 1;
-  const units = { 0: 'day', 1: 'week', 2: '2 weeks' };
-  const lastDay = new Date('May 22, 2021 00:00:00');
-  var remainingDays = (lastDay - Date.now()) / 1000 / 24 / 60 / 60;
-  remainingDays = Math.ceil(remainingDays);
-
-  const [timeUnit, setTimeUnit] = useState(units[1]);
-  const [isPoints, setIsPoints] = useState(null);
-  const [goal, setGoal] = useState(null);
-  const [past, setPast] = useState(null);
-  const [moneyUnit, setMoneyUnit] = useState(null);
-
-  // const [goal, setGoal] = useState(null);
-
   const amountGoal = 20;
   const amountLeft = 15;
   const valuePercentage = 100 * (1 - amountLeft / amountGoal);
